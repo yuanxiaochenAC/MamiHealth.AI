@@ -1,54 +1,35 @@
+<!-- MamiHealth Banner Section -->
 <div align="center">
-
-### 🖼️ MamiHealth App Preview
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./Asset/landing_page.jpg" width="300px"/><br>
-      <sub><b>Landing Page</b></sub>
-    </td>
-    <td align="center">
-      <img src="./Asset/chat_page.JPG" width="300px"/><br>
-      <sub><b>Chat Interaction</b></sub>
-    </td>
-    <td align="center">
-      <img src="./Asset/setting_page.JPG" width="300px"/><br>
-      <sub><b>Settings Page</b></sub>
-    </td>
-  </tr>
-</table>
-
-</div>
-
-
-<!-- Project Banner -->
-<div align="center">
-  <a href="https://github.com/YourOrg/MamiHealth">
-    <img src="./assets/mamihealth_banner.png" alt="MamiHealth Logo" width="60%">
-  </a>
+  <img src="Asset/logo.png" alt="MamiHealth Logo" width="180"/>
 </div>
 
 <h2 align="center">
-  Your AI Nutrition Companion — Make Better Food Choices, One Photo at a Time
+  爱你妈咪 MamiHealth
 </h2>
 
+<p align="center">
+  Your AI Nutrition Companion — Make Better Food Choices, One Photo at a Time  
+  <br/>
+  你的 AI 饮食伙伴 —— 每一口之前，做出更健康的选择
+</p>
+
+<br/>
+
+<!-- App Previews (Vertical Layout) -->
 <div align="center">
+  <img src="Asset/landing_page.jpg" alt="Landing Page" width="600"/>
+  <br/>
+  <em>Landing Page</em>
+  <br/><br/>
 
-[![Homepage](https://img.shields.io/badge/MamiHealth-Website-orange?logo=homebridge)](https://mamihealth.app)  
-[![Docs](https://img.shields.io/badge/-Documentation-0A66C2?logo=readthedocs&logoColor=white&color=7289DA&labelColor=grey)](./docs)  
-[![Star](https://img.shields.io/github/stars/YourOrg/MamiHealth?style=social)](https://github.com/YourOrg/MamiHealth/stargazers)  
-[![Fork](https://img.shields.io/github/forks/YourOrg/MamiHealth?style=social)](https://github.com/YourOrg/MamiHealth/fork)  
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+  <img src="Asset/chat_page.JPG" alt="Chat Interaction" width="600"/>
+  <br/>
+  <em>Chat Interaction</em>
+  <br/><br/>
 
-</div>
-
-<div align="center">
-
-<h3 align="center">
-<a href="./README.md">English</a> | <a href="./README-zh.md">简体中文</a>
-</h3>
-
+  <img src="Asset/setting_page.JPG" alt="Settings Page" width="600"/>
+  <br/>
+  <em>Settings Page</em>
 </div>
 
 ---
@@ -63,74 +44,39 @@ Unlike calorie-counting apps, MamiHealth offers warm, empathetic, and behavior-f
 
 ---
 
-## ✨ Key Features
-
-- 📸 **Pre-meal photo recognition**  
-  Automatically analyzes your food composition using AI image models.
-
-- 🩺 **Health-aware dietary advice**  
-  Tailored suggestions based on chronic conditions (diabetes, gout, hypertension, etc.)
-
-- 💬 **“Mami AI” Companion**  
-  A virtual, warm, supportive guide — not a cold data bot.
-
-- 🧠 **Long-term health data archiving**  
-  Tracks trends, behaviors, and generates quarterly health summaries.
-
-- 🔁 **Gentle behavior nudging**  
-  Encourages sustainable healthy habits through micro-interactions, not punishment.
-
----
-
 ## 🧭 System Workflow Overview
 
-The following diagram illustrates how MamiHealth works behind the scenes:
+Below is a simplified workflow of how MamiHealth operates behind the scenes:
 
 ```
-+--------------------+
-|  User takes photo  |
-+--------------------+
-          |
-          v
-+-------------------------+
-|  AI analyzes the meal   |
-|  (food type, nutrients) |
-+-------------------------+
-          |
-          v
-+-------------------------------+
-|  Match with user health data |
-| (e.g. diabetes, gout risks)  |
-+-------------------------------+
-          |
-          v
-+------------------------------+
-|  Generate personalized tip  |
-|  via Mami AI (e.g. “Too salty!”) |
-+------------------------------+
-          |
-          v
-+------------------------------+
-|  Update trend archive       |
-|  and habit tracking         |
-+------------------------------+
-```
+         ┌───────────────────────┐
+         │   User takes photo    │
+         └─────────┬─────────────┘
+                   │
+                   ▼
+   ┌────────────────────────────────────┐
+   │   AI analyzes the meal image       │
+   │ (e.g. food type, calories, sodium) │
+   └─────────┬──────────────────────────┘
+             │
+             ▼
+  ┌────────────────────────────────────────┐
+  │   Match with user health profile       │
+  │  (e.g. diabetes, gout, weight goals)   │
+  └─────────┬──────────────────────────────┘
+            │
+            ▼
+  ┌──────────────────────────────────────┐
+  │   Generate personalized suggestion   │
+  │   (via warm Mami AI dialogue)        │
+  └─────────┬────────────────────────────┘
+            │
+            ▼
+  ┌──────────────────────────────────────┐
+  │     Update long-term user archive    │
+  │     (trend chart, risk history)      │
+  └──────────────────────────────────────┘
 
----
-
-## 🚀 Quick Start
-
-You can view and remix the live AI app here:  
-👉 [MamiHealth on AI Studio](https://ai.studio/apps/drive/1UZRccbhMGKNyrQHFgZiV7Xktafy9OPpU)
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/YourOrg/MamiHealth.git
-cd MamiHealth
-npm install
 ```
 
 ---
@@ -138,97 +84,43 @@ npm install
 ## 💻 Run Locally
 
 ```bash
-# Set up API key
-echo "GEMINI_API_KEY=your_api_key_here" > .env.local
+git clone https://github.com/YourOrg/MamiHealth.git
+cd MamiHealth
+npm install
+```
 
-# Start the dev server
+```bash
+# Set up your API key
+echo "GEMINI_API_KEY=your_api_key_here" > .env.local
+```
+
+```bash
 npm run dev
 ```
 
-Then open:
-
-```
-http://localhost:5173
-```
+Then open: `http://localhost:5173`
 
 ---
 
 ## 🔐 Environment Variables
 
 | Key             | Description                       |
-|------------------|-----------------------------------|
-| `GEMINI_API_KEY` | Required to use the AI backend     |
-
----
-
-## 🎯 Target Users
-
-- 👨‍⚕️ Patients managing chronic diseases (gout, diabetes, etc.)  
-- 👩 Individuals on weight-loss journeys  
-- 🏙 Busy professionals who rely on takeout meals  
-
----
-
-## 🔬 B2B Use Cases
-
-- Health screening + food behavior feedback for checkup centers  
-- Corporate wellness & employee dietary nudging  
-- Integration with insurance wellness scoring  
-- Nutrition-sensitive food brand partnerships (recommendation engine)
-
----
-
-## 🧪 Demo Video
-
-🎥 _(Insert demo link here — YouTube, Bilibili, or WebM)_
+|----------------|------------------------------------|
+| `GEMINI_API_KEY` | Required to access the AI service |
 
 ---
 
 ## 📊 Roadmap
 
-- [ ] iOS / Android native app  
-- [ ] Personal dashboard + data visualization  
-- [ ] Nutrition trend reporting engine  
-- [ ] B2B partnership API  
-- [ ] Personalized recipe recommendations  
-
----
-
-## 🤝 Community
-
-We’re building an open, collaborative health-tech community.  
-Have ideas? Want to partner, contribute, or share feedback?
-
-- [Discussions](https://github.com/YourOrg/MamiHealth/discussions)  
-- [Submit an Issue](https://github.com/YourOrg/MamiHealth/issues)  
-- [Request a Feature](https://github.com/YourOrg/MamiHealth/issues/new?labels=feature)
-
----
-
-## 🙌 Contributing
-
-We welcome contributions of all kinds!
-
-```bash
-# Fork the repo
-# Clone and start coding
-```
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for full guidelines.
+- [ ] Native iOS & Android app  
+- [ ] Personalized health dashboard  
+- [ ] Recipe and meal planning module  
+- [ ] Partnerships with health check centers and insurance  
+- [ ] Daily health nudges and reward system  
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.  
+This project is licensed under the **MIT License**.  
 See [`LICENSE`](./LICENSE) for details.
-
----
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=YourOrg/MamiHealth&type=Date)](https://star-history.com/#YourOrg/MamiHealth)
-
----
-
-_Made with 🧡 to help people eat better, live healthier, and feel cared for._
